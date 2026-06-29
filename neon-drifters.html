@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEON DRIFTERS | Arcadia-7</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#050510;
+color:white;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+.hero{
+height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url('assets/neon-drifters-banner.jpeg');
+background-size:cover;
+background-position:center;
+}
+
+h1{
+font-family:'Orbitron',sans-serif;
+font-size:72px;
+color:#00ffff;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.section{
+padding:80px 0;
+}
+
+.lore{
+font-size:19px;
+line-height:2;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.video-frame{
+display:block;
+width:min(80vw,850px);
+max-height:60vh;
+margin:50px auto;
+border-radius:20px;
+object-fit:contain;
+}
+
+.camera-roll{
+width:100%;
+overflow:hidden;
+padding:30px 0;
+margin-top:60px;
+}
+
+.camera-track{
+display:flex;
+width:max-content;
+animation:scrollImages 40s linear infinite;
+}
+
+.camera-track img{
+
+width:140px;
+height:140px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+margin-right:12px;
+
+flex-shrink:0;
+}
+
+@keyframes scrollImages{
+
+0%{
+transform:translateX(-50%);
+}
+
+100%{
+transform:translateX(0%);
+}
+
+}
+.oddpuffs-brand{
+
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+letter-spacing:1px;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffe600,
+#ff00ff,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:brandFlow 8s linear infinite;
+}
+@keyframes brandFlow{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.back-btn{
+
+display:inline-block;
+
+padding:15px 30px;
+
+background:#00ffff;
+
+color:black;
+
+font-family:'Orbitron',sans-serif;
+
+border-radius:50px;
+
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div>
+<h1>NEON DRIFTERS</h1>
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="lore">
+
+<h2 style="font-family:Orbitron;">"The journey matters more than the destination."</h2>
+
+<p>
+
+<p>The Neon Drifters wander endlessly across Arcadia-7.<p>
+
+<p>Rather than settling in one place, they travel between regions following mysterious signals, glitches, and rumors.<p>
+
+<p>Many believe they can hear echoes of the universe itself.<p>
+
+
+<p><h2>Beliefs</h2><p>
+
+<p>• Freedom above all.
+
+• No server should control destiny.<p>
+
+<p>• The universe is meant to be explored. <p>
+
+<p><h2>Territory</h2><p>
+
+<p>Everywhere and nowhere.<p>
+
+<p><h2>Reputation</h2><p>
+
+<p>Nomads, storytellers, and messengers.<p>
+
+</p>
+
+</div>
+
+<video
+class="video-frame"
+autoplay
+loop
+muted
+playsinline>
+
+<source src="assets/neon-drifters-video.mp4" type="video/mp4">
+
+</video>
+
+<div class="lore">
+
+<p>
+
+<p>Neon Drifters are freedom-loving explorers who roam Arcadia-7 chasing mysteries, signals, and hidden discoveries.<p> 
+
+<p>Known for their adaptability and curiosity, they uncover secrets where others see chaos.<p>
+
+<p>For a Neon Drifter, every journey is an adventure and every glitch may reveal a new path forward.<p>
+
+</p>
+
+<div class="camera-roll">
+
+<div class="camera-track">
+
+<img src="assets/neon-drifters-01.jpeg">
+<img src="assets/neon-drifters-02.jpeg">
+<img src="assets/neon-drifters-03.jpeg">
+<img src="assets/neon-drifters-04.jpeg">
+<img src="assets/neon-drifters-05.jpeg">
+<img src="assets/neon-drifters-06.jpeg">
+<img src="assets/neon-drifters-07.jpeg">
+<img src="assets/neon-drifters-08.jpeg">
+<img src="assets/neon-drifters-09.jpeg">
+<img src="assets/neon-drifters-10.jpeg">
+<img src="assets/neon-drifters-11.jpeg">
+<img src="assets/neon-drifters-12.jpeg">
+<img src="assets/neon-drifters-13.jpeg">
+<img src="assets/neon-drifters-14.jpeg">
+<img src="assets/neon-drifters-15.jpeg">
+
+<img src="assets/neon-drifters-01.jpeg">
+<img src="assets/neon-drifters-02.jpeg">
+<img src="assets/neon-drifters-03.jpeg">
+<img src="assets/neon-drifters-04.jpeg">
+<img src="assets/neon-drifters-05.jpeg">
+
+</div>
+
+</div>
+
+</div>
+<div style="text-align:center;">
+<a href="index.html" class="back-btn">← Back To Arcadia-7</a>
+</div>
+
+</div>
+</section>
+<footer>
+<div style="text-align:center;">
+© 2026 <span class="oddpuffs-brand">OddPuffs</span>. All Rights Reserved.
+
+</footer>
+</body>
+</html>

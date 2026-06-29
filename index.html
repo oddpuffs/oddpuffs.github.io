@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The OddPuffs NFT | Arcadia-7</title>
+
+<meta name="description" content="The OddPuffs NFT - Digital beings born from the ruins of Arcadia-7 after the Great Pixel Crash.">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+radial-gradient(circle at top left,#00e5ff22 0%,transparent 30%),
+radial-gradient(circle at top right,#ff00ff22 0%,transparent 30%),
+radial-gradient(circle at bottom left,#00ff8822 0%,transparent 30%),
+radial-gradient(circle at bottom right,#ff880022 0%,transparent 30%),
+linear-gradient(135deg,#050510,#090a18,#0f1022,#06070d);
+
+background-attachment:fixed;
+
+color:#ffffff;
+
+font-family:'Inter',sans-serif;
+
+overflow-x:hidden;
+}
+
+/* Animated Neon Background */
+
+body::before{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:
+radial-gradient(circle at 10% 10%,rgba(0,255,255,.12),transparent 35%),
+radial-gradient(circle at 90% 20%,rgba(255,0,255,.12),transparent 35%),
+radial-gradient(circle at 50% 80%,rgba(255,136,0,.10),transparent 35%),
+radial-gradient(circle at 30% 60%,rgba(0,255,136,.10),transparent 35%);
+
+pointer-events:none;
+
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+linear-gradient(
+90deg,
+transparent 0%,
+rgba(0,255,255,.03) 25%,
+transparent 50%,
+rgba(255,0,255,.03) 75%,
+transparent 100%
+);
+animation:gridMove 18s linear infinite;
+pointer-events:none;
+z-index:-1;
+}
+
+@keyframes neonPulse{
+
+0%{
+transform:scale(1);
+filter:hue-rotate(0deg);
+}
+
+50%{
+transform:scale(1.1);
+filter:hue-rotate(90deg);
+}
+
+100%{
+transform:scale(1);
+filter:hue-rotate(180deg);
+}
+
+}
+
+@keyframes gridMove{
+
+0%{
+transform:translateX(-5%);
+}
+
+100%{
+transform:translateX(5%);
+}
+
+}
+.oddpuffs-brand{
+
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+letter-spacing:1px;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffe600,
+#ff00ff,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:brandFlow 8s linear infinite;
+}
+@keyframes brandFlow{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+section{
+padding:100px 0;
+}
+
+h1,h2,h3{
+font-family:'Orbitron',sans-serif;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(6,7,13,.95);
+backdrop-filter:blur(12px);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.nav-inner{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+background:linear-gradient(
+90deg,
+#00f5ff,
+#00ff95,
+#ffe600,
+#ff00ea,
+#00f5ff
+);
+background-size:400% 400%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:rainbowText 8s linear infinite;
+}
+
+@keyframes rainbowText{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+opacity:.8;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#4be3ff;
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+url('./assets/hero.jpeg');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:90px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#ffffff;
+text-shadow:
+0 0 10px #00f5ff,
+0 0 20px #00f5ff,
+0 0 40px #00f5ff,
+0 0 60px #00f5ff;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+line-height:1.9;
+font-size:20px;
+opacity:.9;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 32px;
+border-radius:50px;
+font-weight:700;
+}
+
+.primary{
+background:linear-gradient(
+90deg,
+#00f5ff,
+#00ff95,
+#ffe600
+);
+color:#000;
+font-weight:800;
+box-shadow:
+0 0 15px rgba(0,255,255,.5),
+0 0 35px rgba(0,255,255,.3);
+}
+
+.secondary{
+background:#00f0ff;
+color:#000;
+border:none;
+box-shadow:
+0 0 15px rgba(0,240,255,.6),
+0 0 35px rgba(0,240,255,.3);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+transition:.3s;
+}
+
+.primary:hover{
+box-shadow:
+0 0 20px #00f5ff,
+0 0 50px #00f5ff;
+}
+
+.secondary:hover{
+background:#ff00ea;
+color:#fff;
+box-shadow:
+0 0 20px #ff00ea,
+0 0 50px #ff00ea;
+}
+
+/* TITLES */
+
+.section-title{
+text-align:center;
+font-size:46px;
+margin-bottom:25px;
+background:linear-gradient(
+90deg,
+#00f5ff,
+#00ff95,
+#ffe600,
+#ff5e00,
+#ff00ea
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:
+0 0 15px rgba(0,255,255,.4),
+0 0 25px rgba(255,0,255,.4);
+}
+
+.lore-text,
+.section-sub{
+max-width:1000px;
+margin:10px auto 0 auto;
+text-align:center;
+white-space:pre-line;
+line-height:1.8;
+font-size:18px;
+}
+.section-title{
+margin-bottom:10px;
+}
+
+/* LORE */
+
+.lore-box{
+max-width:1000px;
+margin:10px auto 0 auto;
+padding:0;
+text-align:center;
+}
+
+/* FACTIONS */
+
+.factions{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.card{
+background:rgba(16,18,28,.85);
+backdrop-filter:blur(12px);
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:
+0 0 15px rgba(0,255,255,.08),
+0 0 25px rgba(255,0,255,.08);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:
+0 0 15px #00f5ff,
+0 0 35px rgba(0,255,255,.5),
+0 0 60px rgba(255,0,255,.35);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+margin-bottom:15px;
+color:#00f5ff;
+text-shadow:
+0 0 10px #00f5ff,
+0 0 20px rgba(0,255,255,.5);
+}
+
+.card-content p{
+line-height:1.9;
+opacity:.85;
+}
+
+/* ROADMAP */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.lore-box{
+max-width:1000px;
+margin:10px auto 0 auto;
+padding:0;
+text-align:center;
+}
+
+.rainbow-highlight{
+
+font-size:42px;
+font-weight:800;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffe600,
+#ff8800,
+#ff00ff,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:rainbowFlow 6s linear infinite;
+
+display:block;
+margin-top:25px;
+margin-bottom:25px;
+
+text-shadow:
+0 0 10px rgba(0,255,255,.4),
+0 0 25px rgba(255,0,255,.4);
+}
+
+@keyframes rainbowFlow{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+
+
+/* FOOTER */
+
+footer{
+padding:80px 0;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+background:
+linear-gradient(
+90deg,
+rgba(0,255,255,.08),
+rgba(255,0,255,.08)
+);
+}
+
+.socials{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:25px;
+}
+
+.socials a{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:28px;
+
+border-radius:50%;
+border:1px solid rgba(75,227,255,.35);
+
+background:rgba(255,255,255,.03);
+
+transition:.35s ease;
+}
+
+.socials a:hover{
+transform:translateY(-5px) scale(1.1);
+
+box-shadow:
+0 0 15px #00f5ff,
+0 0 35px rgba(0,255,255,.4);
+
+border-color:#00f5ff;
+}
+
+.socials i{
+color:white;
+}
+.socials a:nth-child(1):hover{
+box-shadow:0 0 20px #ffffff;
+}
+
+.socials a:nth-child(2):hover{
+box-shadow:0 0 20px #5865F2;
+}
+
+.socials a:nth-child(3):hover{
+box-shadow:0 0 20px #E1306C;
+}
+
+.socials a:nth-child(4):hover{
+box-shadow:0 0 20px #FF0000;
+}
+
+.footer-text{
+opacity:.7;
+margin-top:25px;
+}
+.oddpuff-font{
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+}
+
+.oddpuff-highlight{
+
+font-size:52px;
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+
+background:
+linear-gradient(
+90deg,
+#ffe600,
+#ff8800,
+#ff3300,
+#ffe600
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:oddGlow 5s linear infinite;
+
+display:block;
+
+margin:30px 0;
+
+text-align:center;
+}
+
+@keyframes oddGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+
+.life-highlight{
+
+font-size:36px;
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+
+background:
+linear-gradient(
+90deg,
+#00ff88,
+#00ffff,
+#66ffcc,
+#00ff88
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:lifeGlow 5s linear infinite;
+
+display:block;
+
+margin-bottom:25px;
+
+text-align:center;
+}
+
+@keyframes lifeGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+
+.admin-highlight{
+
+font-size:38px;
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+
+background:
+linear-gradient(
+90deg,
+#ff3300,
+#ff8800,
+#ffe600,
+#ff3300
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:adminGlow 5s linear infinite;
+
+display:block;
+
+margin-top:25px;
+
+text-align:center;
+}
+
+@keyframes adminGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+@media(max-width:768px){
+
+.hero h1{
+font-size:90px;
+margin-bottom:20px;
+background:linear-gradient(
+90deg,
+#00f5ff,
+#00ff95,
+#ffe600,
+#ff00ea
+);
+background-size:300% 300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:rainbowText 6s linear infinite;
+text-shadow:
+0 0 25px rgba(0,255,255,.4),
+0 0 45px rgba(255,0,255,.4);
+}
+
+.hero p{
+font-size:18px;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+<div class="container nav-inner">
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#lore">Lore</a>
+<a href="#factions">Factions</a>
+<a href="#wars">Neon Wars</a>
+<a href="#community">Community</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>THE <span class="oddpuff-font">ODDPUFFS</span></h1>
+
+<p>
+Tiny digital beings born from corrupted code and forgotten gamer memories after the Great Pixel Crash shattered Arcadia-7 forever.
+</p>
+
+<div class="hero-buttons">
+<a href="lore.html" class="btn primary">
+Explore Arcadia-7
+</a>
+<a href="oddpuffs-lore.html" class="btn secondary">
+Explore OddPuffs
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">Who Are OddPuffs?</h2>
+
+<p class="section-sub">
+Oddpuffs are adorable yet chaotic digital survivors created when abandoned gamer emotions fused with broken code. Oversized glossy eyes holding memory fragments. Squishy cheeks formed from pixel energy. Crooked smiles shaped by emotional glitches. Neon mutations born from the crash itself.
+Each Oddpuffs carries fragments of lost memories, forgotten victories, rare loot drops, and legendary moments from a fallen gaming civilization. Every Oddpuffs has its own story.
+Its own scars !! Its own secrets !!
+
+</p>
+
+</div>
+
+</section>
+
+<section id="lore">
+
+<div class="container">
+
+<h2 class="section-title">The Fall of Arcadia-7</h2>
+
+<div class="lore-box">
+
+<p class="lore-text">
+Long before the modern metaverse, there was Arcadia-7. A hidden gaming universe buried deep inside abandoned internet infrastructure. The servers absorbed every player emotion. Every victory. Every defeat. Every friendship. Every rivalry. Every legendary loot drop.
+
+Then came the Great Pixel Crash.
+
+Entire cities collapsed into glitch storms. Leaderboards shattered.Millions of memories were lost.Yet deep within the broken servers, fragments of gamer emotions fused with corrupted code.
+
+The result?
+
+<div class="rainbow-highlight">
+<div class="oddpuff-highlight">
+THE <span class="oddpuffs-brand">OddPuffs</span>
+</div>
+</div>
+
+<div class="life-highlight">
+ADORABLE!    CHAOTIC!    ALIVE!
+</div>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="factions">
+
+<div class="container">
+
+<h2 class="section-title">The Factions of Arcadia-7</h2>
+
+<div class="factions">
+
+<a href="glitch-raiders.html" class="card"> <img src="assets/glitch-raiders.jpeg"> <div class="card-content"> <h3>Glitch Raiders</h3> <p>Relic hunters exploring corrupted vaults and forgotten loot chambers searching for legendary artifacts.</p> </div> </a>
+
+<a href="neon-drifters.html" class="card"> <img src="assets/neon-drifters.jpeg"> <div class="card-content"> <h3>Neon Drifters</h3> <p>Survivors roaming abandoned cyber streets and neon wastelands beyond the reach of glitch storms.</p> </div> </a>
+
+<a href="dual-pixel-syndicate.html" class="card"> <img src="assets/dual-pixel-syndicate.jpeg"> <div class="card-content"> <h3>Dual Pixel Syndicate</h3> <p>Masters of the digital black market controlling rare skins, memory fragments, and forbidden relic trades.</p> </div> </a>
+
+<a href="leaderboard-phantoms.html" class="card"> <img src="assets/leaderboard-phantoms.jpeg"> <div class="card-content"> <h3>Leaderboard Phantoms</h3> <p>Competitive spirits obsessed with eternal rankings and preserving legendary scores.</p> </div> </a>
+
+<a href="arcadia-ghosts.html" class="card"> <img src="assets/arcadia-ghosts.jpeg"> <div class="card-content"> <h3>Arcadia Ghosts</h3> <p>Protectors of forgotten gamer memories and guardians of lost digital histories.</p> </div> </a>
+
+<a href="turbo-sprites.html" class="card"> <img src="assets/turbo-sprites.jpeg"> <div class="card-content"> <h3>Turbo Sprites</h3> <p>Speed demons racing through collapsing tunnels and unstable server highways.</p> </div> </a>
+
+<a href="meme-circuit.html" class="card"> <img src="assets/meme-circuit.jpeg"> <div class="card-content"> <h3>Meme Circuit</h3> <p>Agents of viral chaos spreading digital madness across Arcadia-7.</p> </div> </a>
+
+<a href="void-hackers.html" class="card"> <img src="assets/void-hackers.jpeg"> <div class="card-content"> <h3>Void Hackers</h3> <p>Reality manipulators capable of rewriting corrupted code and bending digital existence.</p> </div> </a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="wars">
+
+<div class="container">
+
+<h2 class="section-title">The Neon Wars</h2>
+
+<div class="lore-box">
+
+<p class="lore-text">
+Arcadia-7 remains alive but unstable. Glitch storms consume entire districts. Ancient portals open inside broken servers. Every faction battles for influence. Every faction seeks CORE-ZERO — the last surviving source code of Arcadia-7. Some believe a hidden entity still controls the network.
+A mysterious figure known only as:
+<div class="admin-highlight">
+THE LAST ADMIN !!
+</div>
+</div>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">What Does An <span class="oddpuffs-brand">OddPuffs</span> Represent?</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>Memory Fragments</h3>
+<p>Pieces of forgotten gamer stories preserved forever.</p>
+</div>
+
+<div class="box">
+<h3>Rare Mutations</h3>
+<p>Unique traits born from corrupted code.</p>
+</div>
+
+<div class="box">
+<h3>Faction Allegiance</h3>
+<p>Every OddPuff belongs to a powerful Arcadia-7 faction.</p>
+</div>
+
+<div class="box">
+<h3>Digital History</h3>
+<p>A collectible piece of a lost gaming civilization.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<div class="container">
+
+<h2 class="section-title">Join The Signal</h2>
+
+<p class="section-sub">
+The servers are waking up. The factions are mobilizing. Arcadia-7 is calling new explorers.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>The <span class="oddpuffs-brand">OddPuffs</span> NFT</h2>
+
+<p class="footer-text">
+Recover a lost piece of Arcadia-7.
+</p>
+
+<div class="socials">
+
+<a href="https://twitter.com/OddPuffs"
+target="_blank"
+title="X / Twitter"> <i class="fa-brands fa-x-twitter"></i> </a>
+
+<a href="https://discord.gg/ux4eaXEUS"
+target="_blank"
+title="Discord"> <i class="fa-brands fa-discord"></i> </a>
+
+<a href="https://www.instagram.com/TheOddpuffs"
+target="_blank"
+title="Instagram"> <i class="fa-brands fa-instagram"></i> </a>
+
+<a href="https://www.youtube.com/@TheOddPuffs"
+target="_blank"
+title="YouTube"> <i class="fa-brands fa-youtube"></i> </a>
+
+<a href="https://www.reddit.com/user/Oddpuffs/"
+target="_blank"
+title="Reddit"> <i class="fa-brands fa-reddit"></i> </a>
+
+</div>
+
+<p class="footer-text">
+© 2026 <span class="oddpuffs-brand">OddPuffs</span>. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

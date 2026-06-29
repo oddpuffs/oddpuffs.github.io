@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TURBO SPRITES | Arcadia-7</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#050510;
+color:white;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+.hero{
+height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url('assets/turbo-sprites-banner.jpeg');
+background-size:cover;
+background-position:center;
+}
+
+h1{
+font-family:'Orbitron',sans-serif;
+font-size:72px;
+color:#00ffff;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.section{
+padding:80px 0;
+}
+
+.lore{
+font-size:19px;
+line-height:2;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.video-frame{
+display:block;
+width:min(80vw,850px);
+max-height:60vh;
+margin:50px auto;
+border-radius:20px;
+object-fit:contain;
+}
+
+.camera-roll{
+width:100%;
+overflow:hidden;
+padding:30px 0;
+margin-top:60px;
+}
+
+.camera-track{
+display:flex;
+width:max-content;
+animation:scrollImages 40s linear infinite;
+}
+
+.camera-track img{
+
+width:140px;
+height:140px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+margin-right:12px;
+
+flex-shrink:0;
+}
+
+@keyframes scrollImages{
+
+0%{
+transform:translateX(-50%);
+}
+
+100%{
+transform:translateX(0%);
+}
+
+}
+.oddpuffs-brand{
+
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+letter-spacing:1px;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffe600,
+#ff00ff,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:brandFlow 8s linear infinite;
+}
+@keyframes brandFlow{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.back-btn{
+
+display:inline-block;
+
+padding:15px 30px;
+
+background:#00ffff;
+
+color:black;
+
+font-family:'Orbitron',sans-serif;
+
+border-radius:50px;
+
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div>
+<h1>TURBO SPRITES</h1>
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="lore">
+
+<h2 style="font-family:Orbitron;">"Speed is survival."</h2>
+
+<p>
+
+<p>Turbo Sprites dominate Arcadia-7's collapsing transportation networks.<p>
+
+<p>They race through unstable server tunnels at impossible velocities.<p>
+
+<p>Many inherited memories from competitive racers and speedrunners.<p>
+
+<p><h2>Beliefs</h2><p>
+
+<p>• Momentum creates opportunity.  
+
+• Hesitation leads to deletion. <p> 
+
+<p>• Speed conquers fear. <p> 
+
+<p><h2>Territory</h2><p>
+
+<p>Server highways, race circuits, transit tunnels.<p>
+
+<p><h2>Reputation</h2><p>
+
+<p>Daredevils, couriers, and racing legends.<p>
+
+</p>
+
+</div>
+
+<video
+class="video-frame"
+autoplay
+loop
+muted
+playsinline>
+
+<source src="assets/turbo-sprites-video.mp4" type="video/mp4">
+
+</video>
+
+<div class="lore">
+
+<p>
+
+<p>Turbo Sprites thrive where chaos moves fastest, turning collapsing pathways into their greatest advantage.<p>
+
+<p>Their unmatched reflexes and fearless instincts make them the quickest couriers, scouts, and escape artists in Arcadia-7.<p>
+
+<p>Every high-speed run pushes the limits of what's possible, inspiring others to chase the impossible. To a Turbo Sprite, standing still is the only true danger—because the future belongs to those who keep moving.<p>
+
+</p>
+
+<div class="camera-roll">
+
+<div class="camera-track">
+
+<img src="assets/turbo-sprites-01.jpeg">
+<img src="assets/turbo-sprites-02.jpeg">
+<img src="assets/turbo-sprites-03.jpeg">
+<img src="assets/turbo-sprites-04.jpeg">
+<img src="assets/turbo-sprites-05.jpeg">
+<img src="assets/turbo-sprites-06.jpeg">
+<img src="assets/turbo-sprites-07.jpeg">
+<img src="assets/turbo-sprites-08.jpeg">
+<img src="assets/turbo-sprites-09.jpeg">
+<img src="assets/turbo-sprites-10.jpeg">
+<img src="assets/turbo-sprites-11.jpeg">
+<img src="assets/turbo-sprites-12.jpeg">
+<img src="assets/turbo-sprites-13.jpeg">
+<img src="assets/turbo-sprites-14.jpeg">
+<img src="assets/turbo-sprites-15.jpeg">
+
+<img src="assets/turbo-sprites-01.jpeg">
+<img src="assets/turbo-sprites-02.jpeg">
+<img src="assets/turbo-sprites-03.jpeg">
+<img src="assets/turbo-sprites-04.jpeg">
+<img src="assets/turbo-sprites-05.jpeg">
+
+</div>
+
+</div>
+
+</div>
+<div style="text-align:center;">
+<a href="index.html" class="back-btn">← Back To Arcadia-7</a>
+</div>
+
+</div>
+</section>
+<footer>
+<div style="text-align:center;">
+© 2026 <span class="oddpuffs-brand">OddPuffs</span>. All Rights Reserved.
+
+</footer>
+</body>
+</html>

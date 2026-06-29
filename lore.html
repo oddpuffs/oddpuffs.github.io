@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arcadia-7 Lore | <span class="oddpuffs-brand">OddPuffs</span> NFT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+.top-nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:center;
+gap:15px;
+
+padding:15px;
+
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(12px);
+
+z-index:9999;
+}
+.top-nav a{
+
+padding:10px 20px;
+border-radius:50px;
+
+background:rgba(0,255,255,.15);
+
+color:white;
+
+text-decoration:none;
+
+font-family:'Orbitron',sans-serif;
+
+transition:.3s;
+}
+
+.top-nav a:hover{
+
+background:#00ffff;
+color:black;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:
+linear-gradient(
+135deg,
+#050510,
+#090b18,
+#12071f,
+#06070d
+);
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+url('assets/arcadia.png');
+background-size:cover;
+background-position:center;
+}
+.hero h1{
+
+font-size:90px;
+
+font-family:'Orbitron',sans-serif;
+
+margin-bottom:20px;
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:900px;
+margin:auto;
+}
+color:white;
+
+line-height:1.9;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:70px 0 0;
+text-align:center;
+}
+header p{
+margin-top:8px;
+margin-bottom:0;
+}
+
+.oddpuffs-brand{
+
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+letter-spacing:1px;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffe600,
+#ff00ff,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:brandFlow 8s linear infinite;
+}
+@keyframes brandFlow{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+html,body{
+    margin:0;
+    padding:0;
+}
+
+header h1{
+
+font-family:'Orbitron',sans-serif;
+
+font-size:70px;
+
+margin-bottom:20px;
+}
+
+header p{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:20px;
+
+opacity:.9;
+}
+
+.section{
+padding:80px 0;
+}
+.section h2{
+
+font-family:'Orbitron',sans-serif;
+
+font-size:42px;
+
+margin-bottom:22px;
+
+text-align:center;
+
+color:#4be3ff;
+}
+
+.story{
+
+max-width:1000px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:20px;
+}
+
+.story p{
+margin-bottom:20px;
+}
+
+.image-placeholder{
+
+width:100%;
+
+height:500px;
+
+background:
+linear-gradient(
+135deg,
+rgba(0,255,255,.15),
+rgba(255,0,255,.15)
+);
+
+border:2px dashed rgba(255,255,255,.2);
+
+border-radius:25px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+font-family:'Orbitron',sans-serif;
+
+margin:50px auto;
+}
+
+.video-placeholder{
+
+width:100%;
+
+height:600px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,0,255,.15),
+rgba(255,136,0,.15)
+);
+
+border:2px dashed rgba(255,255,255,.2);
+
+border-radius:25px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+font-family:'Orbitron',sans-serif;
+
+margin:50px auto;
+}
+.online-highlight{
+
+font-family:'Orbitron',sans-serif;
+font-size:28px;
+font-weight:700;
+letter-spacing:4px;
+
+background:
+linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffd700,
+#ff00ff,
+#00ffff
+);
+
+background-size:500% 500%;
+
+-webkit-background-clip;
+-webkit-text-fill-color;
+
+animation 4s linear infinite;
+}
+
+@keyframes adminPulse{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+.highlight{
+
+font-size:50px;
+
+font-family:'Orbitron',sans-serif;
+
+font-weight:800;
+
+background:
+linear-gradient(
+90deg,
+#00ffff,
+#ff00ff,
+#00ff88,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:glow 6s linear infinite;
+
+margin:40px 0;
+
+text-align:center;
+}
+
+@keyframes glow{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+
+.back-btn{
+
+display:inline-block;
+
+padding:16px 30px;
+
+background:#4be3ff;
+
+color:black;
+
+font-weight:700;
+
+border-radius:50px;
+
+margin-top:40px;
+}
+
+footer{
+    padding:25px 0;
+    margin:0;
+    text-align:center;
+}
+.media-frame{
+
+width:100%;
+
+max-width:900px;
+
+margin:40px auto 0;
+
+display:block;
+
+border-radius:20px;
+
+box-shadow:
+0 0 25px rgba(0,255,255,.12);
+
+}
+video.media-frame{
+
+width:65%;
+
+max-width:650px;
+
+margin:40px auto;
+
+display:block;
+
+border-radius:20px;
+
+box-shadow:
+0 0 40px rgba(255,0,255,.20),
+0 0 80px rgba(0,255,255,.10);
+
+}
+.section:last-of-type{
+    padding-bottom:20px;
+}
+/* Pixel Crash - Larger */
+
+.pixel-crash-video{
+
+width:85%;
+
+max-width:900px;
+
+display:block;
+
+margin:35px auto;
+
+border-radius:20px;
+
+box-shadow:
+0 0 35px rgba(255,80,0,.20),
+0 0 80px rgba(255,150,0,.10);
+
+}
+
+/* Trailer - Smaller */
+
+.trailer-video{
+
+width:50%;
+max-width:520px;
+
+display;
+margin:35px auto 15px;
+
+border-radius:20px;
+
+box-shadow:
+0 0 30px rgba(0,255,255,.15),
+0 0 60px rgba(255,0,255,.08);
+
+}
+.pixel-crash-video,
+.trailer-video{
+
+cursor:pointer;
+
+display:block;
+
+margin:auto;
+
+border-radius:20px;
+
+outline:none;
+
+}
+.auto-video{
+
+display:block;
+
+margin:auto;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+<script>
+
+const videos = document.querySelectorAll('.auto-video');
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        const video = entry.target;
+
+        if(entry.isIntersecting){
+
+            if(!video.dataset.userPaused){
+
+                video.play().catch(()=>{});
+
+            }
+
+        }else{
+
+            video.pause();
+
+        }
+
+    });
+
+},{
+    threshold:0.4
+});
+
+videos.forEach(video=>{
+
+    video.controls=false;
+
+    observer.observe(video);
+
+    video.addEventListener('click',()=>{
+
+        if(video.paused){
+
+            video.dataset.userPaused="";
+
+            video.play();
+
+        }else{
+
+            video.dataset.userPaused="true";
+
+            video.pause();
+
+        }
+
+    });
+
+});
+
+</script>
+</style>
+
+</head>
+<script>
+
+document.querySelectorAll('video').forEach(video => {
+
+    video.controls = false;
+
+    video.play();
+
+    video.addEventListener('click', () => {
+
+        if(video.paused){
+
+            video.play();
+
+        } else {
+
+            video.pause();
+
+        }
+
+    });
+
+});
+
+</script>
+<body>
+<nav class="top-nav">
+    <a href="#before-crash">Before The Crash</a>
+    <a href="#pixel-crash">Pixel Crash</a>
+    <a href="#fractured-world">World</a>
+    <a href="#last-admin">Last Admin</a>
+    <a href="#future">Future</a>
+</nav>
+<header>
+<section class="hero">
+<div class="container">
+
+<h1>ARCADIA-7</h1>
+
+<p>
+THE LOST GAMING UNIVERSE
+</p>
+
+</div></header>
+<section id="before-crash" class="section">
+<div class="container">
+
+<h2>Before The Crash</h2>
+
+<div class="story">
+
+<p>
+<p>Long before modern metaverses, blockchain worlds, and interconnected digital realms, there existed a hidden universe known only as Arcadia-7.
+Created decades ago by an anonymous collective of visionary developers, Arcadia-7 was never intended to be just another online game. It was designed as a living digital civilization — a universe capable of evolving alongside its players.<p>
+<p>Every action mattered. Every battle altered history.
+Every friendship, rivalry, achievement, and failure left permanent marks upon the world itself.
+Unlike traditional games where memories vanished after logout, Arcadia-7 remembered everything.
+The servers absorbed player emotions. Victories became energy. Defeats became echoes. Dreams became data.<p>
+Over time, the network grew beyond its creators' control. Entire digital cities emerged. Vast neon kingdoms stretched across endless cyber landscapes. Hidden vaults stored impossible treasures. Legendary champions rose and fell. Millions of players called Arcadia-7 home.
+For years, it flourished. Then came the catastrophe.
+
+</p>
+
+</div>
+
+<img src="assets/arcadia-city.png" class="media-frame">
+</div>
+
+</section>
+
+<section id="pixel-crash" class="section">
+<div class="container">
+
+<h2>The Great Pixel Crash</h2>
+
+<div class="story">
+
+<p>
+No one knows what caused it. Some believe a corrupted update triggered the disaster.
+Others claim an experimental artificial intelligence awakened deep within the server core.
+A few whisper that Arcadia-7 itself became self-aware. Whatever the truth, the result was devastating.
+<p>Without warning, reality inside Arcadia-7 began to fracture. Entire cities dissolved into glitch storms. Trade networks collapsed.
+Leaderboards shattered. Digital continents fragmented into floating shards of corrupted code. Millions of player memories were scattered throughout the system.
+The event became known as:<p>
+<span class="pixel-crash">
+<p>The Great Pixel Crash<p>
+</span>
+The creators disappeared. The servers were abandoned. Arcadia-7 was left to decay. Or so everyone believed.
+
+</p>
+
+</div>
+
+<video
+class="pixel-crash-video auto-video"
+loop
+playsinline>
+
+<source src="assets/pixel-crash.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="fractured-world" class="section">
+<div class="container">
+
+<h2>THE FRACTURED WORLD</h2>
+
+<div class="story">
+
+<p>
+<p>Today, Arcadia-7 exists as a shattered network of interconnected regions. Neon cities flicker between existence and deletion.
+Ancient game servers drift through digital space. Glitch storms rewrite reality without warning. 
+Forgotten vaults hide legendary relics from the age before the crash. Hidden portals connect distant sectors through unstable code tunnels. <p>
+<p>Every region tells a story. Every fragment contains secrets. Every memory holds power.<p>
+<p>The world is broken. Yet somehow, it remains alive.<p>
+
+</p>
+
+</div>
+
+<img src="assets/fractured-world.jpeg" class="media-frame">
+
+</div>
+
+</section>
+
+<section id="last-admin" class="section">
+<div class="container">
+
+<h2>THE LAST ADMIN</h2>
+
+<div class="story">
+
+<p>
+Throughout Arcadia-7, one legend persists above all others.
+Stories speak of a mysterious entity known only as:
+<span class="admin-highlight">
+<p>THE LAST ADMIN<p>
+</span>
+<p>No one knows whether the Last Admin is human, artificial intelligence, or something entirely different.
+Some claim they witnessed a shadow watching from the deepest server layers. Others believe the Last Admin orchestrated the Great Pixel Crash.<p>
+<p>Many think they are the only remaining being capable of restoring Arcadia-7. Or destroying it forever.
+Their existence remains unconfirmed. Yet strange signals continue to appear throughout the network.
+Encrypted messages. Hidden symbols. Impossible system notifications.<p>
+<p>All bearing the same signature:<p>
+<span class="online-highlight">
+ADMIN ONLINE
+</span>
+
+</p>
+
+</div>
+
+<video class="media-frame auto-video" loop muted playsinline>
+
+<source src="assets/factions-banner.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="future" class="section">
+<div class="container">
+
+<h2>THE FUTURE OF ARCADIA-7</h2>
+
+<div class="story">
+
+<p>
+<p>The servers are awakening. Ancient systems are coming back online. Long-forgotten gateways are reopening. The factions prepare for what comes next.<p>
+<p>Some seek power. Some seek answers. Some seek redemption.<p>
+<p>And the <span class="oddpuffs-brand">OddPuffs</span> continue their journey through the ruins of a forgotten gaming civilization, carrying the hopes, dreams, and memories of those who came before them.<p>
+<p>The next chapter of Arcadia-7 has not yet been written. Its future belongs to those brave enough to enter the signal.<p>
+</p>
+
+</div>
+
+<video
+class="trailer-video auto-video"
+loop
+playsinline>
+
+<source src="assets/trailer.mp4" type="video/mp4">
+
+</video>
+
+<div style="text-align:center;">
+
+<a href="index.html" class="back-btn">
+← Back To Homepage
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 <span class="oddpuffs-brand">OddPuffs</span>. All Rights Reserved.
+
+</footer>
+<script>
+
+const videos = document.querySelectorAll('.auto-video');
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        const video = entry.target;
+
+        if(entry.isIntersecting){
+
+            video.play().catch(() => {});
+
+        }else{
+
+            video.pause();
+
+        }
+
+    });
+
+},{
+
+    threshold:0.4
+
+});
+
+videos.forEach(video => {
+
+    video.controls = false;
+
+    observer.observe(video);
+
+});
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OddPuffs Lore | Arcadia-7</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:
+linear-gradient(
+135deg,
+#050510,
+#090a18,
+#11071f,
+#06070d
+);
+
+color:white;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+.oddpuffs-brand{
+
+font-family:'Orbitron',sans-serif;
+font-weight:800;
+letter-spacing:1px;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#00ff88,
+#ffe600,
+#ff00ff,
+#00ffff
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:brandFlow 8s linear infinite;
+}
+
+@keyframes brandFlow{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.top-nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:center;
+gap:15px;
+
+padding:15px;
+
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(12px);
+
+z-index:9999;
+}
+
+.top-nav a{
+
+padding:10px 20px;
+border-radius:50px;
+
+background:rgba(0,255,255,.15);
+
+color:white;
+
+text-decoration:none;
+
+font-family:'Orbitron',sans-serif;
+
+transition:.3s;
+}
+
+.top-nav a:hover{
+
+background:#00ffff;
+color:black;
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.75)
+),
+url('assets/oddpuffs-hero.jpeg');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+
+font-size:90px;
+
+font-family:'Orbitron',sans-serif;
+
+margin-bottom:20px;
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:900px;
+margin:auto;
+}
+
+.section{
+padding:100px 0;
+}
+
+.section-title{
+
+font-family:'Orbitron',sans-serif;
+
+font-size:46px;
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#00ffff;
+}
+
+.story{
+
+max-width:1000px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:20px;
+}
+
+.story p{
+margin-bottom:25px;
+}
+
+.back-btn{
+
+display:inline-block;
+
+padding:16px 30px;
+
+background:#4be3ff;
+
+color:black;
+
+font-weight:700;
+
+border-radius:50px;
+
+margin-top:40px;
+}
+
+.media-frame{
+
+width:65%;
+
+max-width:650px;
+
+margin:40px auto;
+
+display:block;
+
+border-radius:20px;
+
+box-shadow:
+0 0 40px rgba(255,0,255,.20),
+0 0 80px rgba(0,255,255,.10);
+
+}
+video.media-frame{
+
+width:65%;
+
+max-width:650px;
+
+margin:40px auto;
+
+display:block;
+
+border-radius:20px;
+
+box-shadow:
+0 0 40px rgba(255,0,255,.20),
+0 0 80px rgba(0,255,255,.10);
+
+}
+/* Oddpuffs Origin - Smaller */
+
+.oddpuffs-origin-video{
+
+width:50%;
+max-width:520px;
+
+display;
+margin:35px auto;
+
+border-radius:20px;
+
+box-shadow:
+0 0 30px rgba(0,255,255,.15),
+0 0 60px rgba(255,0,255,.08);
+
+}
+
+/* Oddpuffs Generation - Smaller */
+
+.oddpuffs-generation-video{
+
+width:50%;
+max-width:520px;
+
+display;
+margin:35px auto;
+
+border-radius:20px;
+
+box-shadow:
+0 0 30px rgba(0,255,255,.15),
+0 0 60px rgba(255,0,255,.08);
+
+}
+/* Oddpuffs Neon - Smaller */
+
+.oddpuffs-neon-video{
+
+width:50%;
+max-width:520px;
+
+display;
+margin:35px auto;
+
+border-radius:20px;
+
+box-shadow:
+0 0 30px rgba(0,255,255,.15),
+0 0 60px rgba(255,0,255,.08);
+
+}
+.oddpuffs-origin-video,
+.oddpuffs-generation-video,
+.oddpuffs-neon-video{
+
+cursor:pointer;
+
+display:block;
+
+margin:auto;
+
+border-radius:20px;
+
+outline:none;
+
+}
+.auto-video{
+
+display:block;
+
+margin:auto;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+<script>
+
+const videos = document.querySelectorAll('.auto-video');
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        const video = entry.target;
+
+        if(entry.isIntersecting){
+
+            if(!video.dataset.userPaused){
+
+                video.play().catch(()=>{});
+
+            }
+
+        }else{
+
+            video.pause();
+
+        }
+
+    });
+
+},{
+    threshold:0.4
+});
+
+videos.forEach(video=>{
+
+    video.controls=false;
+
+    observer.observe(video);
+
+    video.addEventListener('click',()=>{
+
+        if(video.paused){
+
+            video.dataset.userPaused="";
+
+            video.play();
+
+        }else{
+
+            video.dataset.userPaused="true";
+
+            video.pause();
+
+        }
+
+    });
+
+});
+
+</script>
+</style>
+
+</head>
+<script>
+
+document.querySelectorAll('video').forEach(video => {
+
+    video.controls = false;
+
+    video.play();
+
+    video.addEventListener('click', () => {
+
+        if(video.paused){
+
+            video.play();
+
+        } else {
+
+            video.pause();
+
+        }
+
+    });
+
+});
+
+</script>
+
+<body>
+
+<nav class="top-nav">
+
+<a href="#origins">Origins</a> <a href="#generation">Generation</a> <a href="#soul">Digital Soul</a> <a href="#mutations">Mutations</a> <a href="#corezero">Core-Zero</a>
+
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>
+<span class="oddpuffs-brand">ODDPUFFS</span>
+</h1>
+
+<p>
+The Children of Forgotten Memories
+</p>
+
+</div>
+
+</section>
+
+<section id="origins" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+The Children of Forgotten Memories
+</h2>
+
+<div class="story">
+
+<p>
+
+The OddPuffs were never meant to exist.
+
+They are not artificial intelligence.
+They are not digital pets.
+They are not programs.
+
+They are living anomalies born from the collapse of an entire gaming civilization.
+
+When Arcadia-7 suffered the Great Pixel Crash, billions of lines of code shattered across reality. Entire cities vanished. Inventories disappeared. Player histories were erased forever.
+
+Yet something survived.
+
+Fragments of player emotions fused with corrupted code and abandoned memory archives.
+
+From that impossible fusion emerged a new form of life.
+
+<span class="oddpuffs-brand">The OddPuffs.</span>
+
+</p>
+
+</div>
+
+<video class="oddpuffs-origin-video auto-video"
+loop
+playsinline>
+<source src="assets/oddpuffs-origin.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<img src="assets/oddpuffs-memory.gif" class="media-frame">
+
+</div>
+
+</section>
+
+<section id="generation" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+The First Generation
+</h2>
+
+<div class="story">
+
+<p>
+
+The earliest OddPuffs awakened within abandoned servers.
+
+Some remembered races they never entered.
+Some remembered friendships that were never theirs.
+Others remembered legendary battles.
+
+These inherited fragments became known as Memory Shards.
+
+Every OddPuff contains one or more Memory Shards embedded within its Digital Soul.
+
+No two OddPuffs are alike.
+
+</p>
+
+</div>
+
+<video class="oddpuffs-generation-video auto-video"
+loop
+playsinline>
+<source src="assets/oddpuffs-generation.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+<section id="soul" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+The Digital Soul
+</h2>
+
+<div class="story">
+
+<p>
+
+At the center of every OddPuff exists a Digital Soul.
+
+Memory.
+Emotion.
+Code.
+
+Together these three forces create a living being capable of growth, evolution, and independent thought.
+
+Some legends claim powerful OddPuffs can regenerate from surviving memory fragments.
+
+</p>
+
+</div>
+
+<img src="assets/oddpuffs-soul.jpg" class="media-frame">
+
+</div>
+
+</section>
+
+<section id="mutations" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Neon Mutations
+</h2>
+
+<div class="story">
+
+<p>
+
+The Great Pixel Crash permanently altered reality.
+
+Many OddPuffs possess Neon Variants:
+
+Glitchborn.
+Crystal Memory.
+Static Core.
+Shadow Pixel.
+Quantum Puff.
+
+The rarest mutations are believed to originate directly from Core-Zero.
+
+</p>
+
+</div>
+
+<video class="oddpuffs-neon-video auto-video"
+loop
+playsinline>
+<source src="assets/oddpuffs-neon.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+<section id="corezero" class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+The Prophecy of Core-Zero
+</h2>
+
+<div class="story">
+
+<p>
+
+Ancient data fragments speak of a hidden server known as Core-Zero.
+
+The last intact source code repository of Arcadia-7.
+
+Many believe it contains the truth behind the Great Pixel Crash.
+
+Others believe it holds the power to restore the universe itself.
+
+Some believe the future of all OddPuffs will ultimately be decided there.
+
+At the heart of Core-Zero.
+
+Where the Last Admin still waits.
+
+</p>
+
+</div>
+
+<img src="assets/oddpuffs-corezero.png" class="media-frame">
+
+<div style="text-align:center;">
+
+<a href="index.html" class="back-btn">
+← Back To Homepage
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<div style="text-align:center;">
+© 2026 <span class="oddpuffs-brand">OddPuffs</span>. All Rights Reserved.
+
+</footer>
+<script>
+
+const videos = document.querySelectorAll('.auto-video');
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        const video = entry.target;
+
+        if(entry.isIntersecting){
+
+            video.play().catch(() => {});
+
+        }else{
+
+            video.pause();
+
+        }
+
+    });
+
+},{
+
+    threshold:0.4
+
+});
+
+videos.forEach(video => {
+
+    video.controls = false;
+
+    observer.observe(video);
+
+});
+
+</script>
+</body>
+
+</html>
