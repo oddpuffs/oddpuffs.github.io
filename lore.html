@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Arcadia-7 Lore | <span class="oddpuffs-brand">OddPuffs</span> NFT</title>
+<title>Arcadia-7 Lore | OddPuffs NFT</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -73,6 +73,12 @@ linear-gradient(
 #12071f,
 #06070d
 );
+
+color:white;
+
+line-height:1.9;
+}
+
 .hero{
 height:100vh;
 display:flex;
@@ -100,10 +106,6 @@ font-size:22px;
 
 max-width:900px;
 margin:auto;
-}
-color:white;
-
-line-height:1.9;
 }
 
 .container{
@@ -281,10 +283,12 @@ linear-gradient(
 
 background-size:500% 500%;
 
--webkit-background-clip;
--webkit-text-fill-color;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 
-animation 4s linear infinite;
+display:inline-block;
+
+animation:adminPulse 4s linear infinite;
 }
 
 @keyframes adminPulse{
@@ -401,6 +405,38 @@ box-shadow:
 .section:last-of-type{
     padding-bottom:20px;
 }
+.pixel-crash{
+
+font-family:'Orbitron',sans-serif;
+font-size:32px;
+font-weight:800;
+letter-spacing:2px;
+
+display:block;
+margin:20px 0;
+text-align:center;
+
+background:linear-gradient(
+90deg,
+#ff5000,
+#ff0000,
+#ff9600,
+#ff5000
+);
+
+background-size:400% 400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:pixelCrashGlow 5s linear infinite;
+}
+
+@keyframes pixelCrashGlow{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
 /* Pixel Crash - Larger */
 
 .pixel-crash-video{
@@ -463,91 +499,9 @@ border-radius:20px;
 cursor:pointer;
 
 }
-<script>
-
-const videos = document.querySelectorAll('.auto-video');
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        const video = entry.target;
-
-        if(entry.isIntersecting){
-
-            if(!video.dataset.userPaused){
-
-                video.play().catch(()=>{});
-
-            }
-
-        }else{
-
-            video.pause();
-
-        }
-
-    });
-
-},{
-    threshold:0.4
-});
-
-videos.forEach(video=>{
-
-    video.controls=false;
-
-    observer.observe(video);
-
-    video.addEventListener('click',()=>{
-
-        if(video.paused){
-
-            video.dataset.userPaused="";
-
-            video.play();
-
-        }else{
-
-            video.dataset.userPaused="true";
-
-            video.pause();
-
-        }
-
-    });
-
-});
-
-</script>
 </style>
 
 </head>
-<script>
-
-document.querySelectorAll('video').forEach(video => {
-
-    video.controls = false;
-
-    video.play();
-
-    video.addEventListener('click', () => {
-
-        if(video.paused){
-
-            video.play();
-
-        } else {
-
-            video.pause();
-
-        }
-
-    });
-
-});
-
-</script>
 <body>
 <nav class="top-nav">
     <a href="#before-crash">Before The Crash</a>
@@ -607,9 +561,7 @@ A few whisper that Arcadia-7 itself became self-aware. Whatever the truth, the r
 <p>Without warning, reality inside Arcadia-7 began to fracture. Entire cities dissolved into glitch storms. Trade networks collapsed.
 Leaderboards shattered. Digital continents fragmented into floating shards of corrupted code. Millions of player memories were scattered throughout the system.
 The event became known as:<p>
-<span class="pixel-crash">
-<p>The Great Pixel Crash<p>
-</span>
+<span class="pixel-crash">The Great Pixel Crash</span>
 The creators disappeared. The servers were abandoned. Arcadia-7 was left to decay. Or so everyone believed.
 
 </p>
@@ -748,7 +700,11 @@ const observer = new IntersectionObserver((entries) => {
 
         if(entry.isIntersecting){
 
-            video.play().catch(() => {});
+            if(!video.dataset.userPaused){
+
+                video.play().catch(() => {});
+
+            }
 
         }else{
 
@@ -769,6 +725,24 @@ videos.forEach(video => {
     video.controls = false;
 
     observer.observe(video);
+
+    video.addEventListener('click', () => {
+
+        if(video.paused){
+
+            video.dataset.userPaused = "";
+
+            video.play();
+
+        }else{
+
+            video.dataset.userPaused = "true";
+
+            video.pause();
+
+        }
+
+    });
 
 });
 
