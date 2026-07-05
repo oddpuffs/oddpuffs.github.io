@@ -315,91 +315,9 @@ border-radius:20px;
 cursor:pointer;
 
 }
-<script>
-
-const videos = document.querySelectorAll('.auto-video');
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        const video = entry.target;
-
-        if(entry.isIntersecting){
-
-            if(!video.dataset.userPaused){
-
-                video.play().catch(()=>{});
-
-            }
-
-        }else{
-
-            video.pause();
-
-        }
-
-    });
-
-},{
-    threshold:0.4
-});
-
-videos.forEach(video=>{
-
-    video.controls=false;
-
-    observer.observe(video);
-
-    video.addEventListener('click',()=>{
-
-        if(video.paused){
-
-            video.dataset.userPaused="";
-
-            video.play();
-
-        }else{
-
-            video.dataset.userPaused="true";
-
-            video.pause();
-
-        }
-
-    });
-
-});
-
-</script>
 </style>
 
 </head>
-<script>
-
-document.querySelectorAll('video').forEach(video => {
-
-    video.controls = false;
-
-    video.play();
-
-    video.addEventListener('click', () => {
-
-        if(video.paused){
-
-            video.play();
-
-        } else {
-
-            video.pause();
-
-        }
-
-    });
-
-});
-
-</script>
 
 <body>
 
@@ -648,7 +566,11 @@ const observer = new IntersectionObserver((entries) => {
 
         if(entry.isIntersecting){
 
-            video.play().catch(() => {});
+            if(!video.dataset.userPaused){
+
+                video.play().catch(() => {});
+
+            }
 
         }else{
 
@@ -669,6 +591,24 @@ videos.forEach(video => {
     video.controls = false;
 
     observer.observe(video);
+
+    video.addEventListener('click', () => {
+
+        if(video.paused){
+
+            video.dataset.userPaused = "";
+
+            video.play();
+
+        }else{
+
+            video.dataset.userPaused = "true";
+
+            video.pause();
+
+        }
+
+    });
 
 });
 
